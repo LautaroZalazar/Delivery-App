@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import Express from "express";
 import Cors from "cors";
 import morgan from "morgan";
-/* import route from "./src/index.js"; */
+import route from "./src/index.js";
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 
 const app = Express();
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 });
 
 // Route
-/* app.use("/", route); */
+app.use("/", route);
 
 // Coneccion.
 
