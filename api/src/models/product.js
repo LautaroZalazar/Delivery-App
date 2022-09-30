@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const product = mongoose.Model(
+const product = mongoose.model(
     'product',
     new mongoose.Schema({
         name:{
