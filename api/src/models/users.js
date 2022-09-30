@@ -10,7 +10,14 @@ const user = mongoose.model(
             type: String
         },
         email:{
-            type: String
+            type: String,
+            match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/, "Invalid email"],
+            validate:{
+                validator(e){
+                    mongoose.model("user").findOne({email: e}).then(u => !u)
+                },
+                message: "Is already registered"
+            }
         },
         password:{
             type: String
