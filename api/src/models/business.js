@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const business = mongoose.model(
     'business',
@@ -27,3 +27,5 @@ const business = mongoose.model(
         ]
     })
 )
+
+export default business
