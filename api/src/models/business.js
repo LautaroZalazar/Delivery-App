@@ -24,7 +24,17 @@ const business = mongoose.model(
                 type: mongoose.Schema.ObjectId,
                 ref: 'review'
             }
-        ]
+        ],
+        product: [
+            {
+                type: mongoose.Schema.ObjectId,
+                ref: 'product'
+            }
+        ],
+        businessCategorie: {
+            type: mongoose.Schema.ObjectId,
+            ref: 'businessCategories'
+        }
     })
 )
 
