@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const product = mongoose.Model(
+const product = mongoose.model(
     'product',
     new mongoose.Schema({
         name:{
@@ -13,9 +13,11 @@ const product = mongoose.Model(
         stock:{
             type:Number
         },
-        image:{
-            type: String
-        },
+        image:[
+            {
+                type: String
+            }
+        ],
         disabled:{
             type: Boolean,
             default: false
