@@ -13,9 +13,11 @@ const product = mongoose.model(
         stock:{
             type:Number
         },
-        image:{
-            type: String
-        },
+        image:[
+            {
+                type: String
+            }
+        ],
         disabled:{
             type: Boolean,
             default: false
