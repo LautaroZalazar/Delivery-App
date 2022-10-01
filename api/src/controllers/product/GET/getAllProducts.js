@@ -3,6 +3,7 @@ import Product from "../../../models/product.js";
 const getAllProducts = async (req, res) => {
     try {
         let products = await Product.find({})
+            .populate({ path: "review"})
         if(products){
             res.json(products)
         }
